@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace FakturoPol
 {
-    public partial class Form1 : Form
+    public partial class Glowny : Form
     {
-        public Form1()
+        public Glowny()
         {
             InitializeComponent();
-            this.Dodaj_comboBox1.Items.Add("Faktura");
-            this.Dodaj_comboBox1.Items.Add("Paragon Fiskalny");
-            this.Dodaj_comboBox1.Items.Add("Nota księgowa");
+            this.WybierzTyp_comboBox1.Items.Add("Faktura");
+            this.WybierzTyp_comboBox1.Items.Add("Paragon Fiskalny");
+            this.WybierzTyp_comboBox1.Items.Add("Nota księgowa");
         }
 
         private void Dodaj_comboBox1_SelectedIndexChanged(object sender, EventArgs e)

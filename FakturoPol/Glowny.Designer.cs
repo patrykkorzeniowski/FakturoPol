@@ -1,6 +1,6 @@
 ﻿namespace FakturoPol
 {
-    partial class Form1
+    partial class Glowny
     {
         /// <summary>
         /// Wymagana zmienna projektanta.
@@ -31,9 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.kontrahenci_listBox1 = new System.Windows.Forms.ListBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.Dodaj_comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.Wystaw_button1 = new System.Windows.Forms.Button();
+            this.WybierzTyp_comboBox1 = new System.Windows.Forms.ComboBox();
             this.fakturoPolDataSet = new FakturoPol.FakturoPolDataSet();
             this.fakturoPolDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.fakturoPolDataSet)).BeginInit();
@@ -58,32 +57,26 @@
             this.listBox2.Size = new System.Drawing.Size(468, 276);
             this.listBox2.TabIndex = 1;
             // 
-            // button1
+            // Wystaw_button1
             // 
-            this.button1.Location = new System.Drawing.Point(305, 89);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Wystaw_button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Wystaw_button1.Location = new System.Drawing.Point(169, 89);
+            this.Wystaw_button1.Name = "Wystaw_button1";
+            this.Wystaw_button1.Size = new System.Drawing.Size(130, 24);
+            this.Wystaw_button1.TabIndex = 2;
+            this.Wystaw_button1.Text = "Dodaj";
+            this.Wystaw_button1.UseVisualStyleBackColor = true;
+            this.Wystaw_button1.Click += new System.EventHandler(this.Form1_Load);
             // 
-            // Dodaj_comboBox1
+            // WybierzTyp_comboBox1
             // 
-            this.Dodaj_comboBox1.FormattingEnabled = true;
-            this.Dodaj_comboBox1.Location = new System.Drawing.Point(36, 89);
-            this.Dodaj_comboBox1.Name = "Dodaj_comboBox1";
-            this.Dodaj_comboBox1.Size = new System.Drawing.Size(127, 24);
-            this.Dodaj_comboBox1.TabIndex = 4;
-            this.Dodaj_comboBox1.Text = "Wystaw";
-            this.Dodaj_comboBox1.SelectedIndexChanged += new System.EventHandler(this.Dodaj_comboBox1_SelectedIndexChanged);
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(172, 88);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(127, 24);
-            this.comboBox2.TabIndex = 5;
+            this.WybierzTyp_comboBox1.FormattingEnabled = true;
+            this.WybierzTyp_comboBox1.Location = new System.Drawing.Point(36, 89);
+            this.WybierzTyp_comboBox1.Name = "WybierzTyp_comboBox1";
+            this.WybierzTyp_comboBox1.Size = new System.Drawing.Size(127, 24);
+            this.WybierzTyp_comboBox1.TabIndex = 4;
+            this.WybierzTyp_comboBox1.Text = "Typ dokumentu";
+            this.WybierzTyp_comboBox1.SelectedIndexChanged += new System.EventHandler(this.Dodaj_comboBox1_SelectedIndexChanged);
             // 
             // fakturoPolDataSet
             // 
@@ -95,17 +88,16 @@
             this.fakturoPolDataSetBindingSource.DataSource = this.fakturoPolDataSet;
             this.fakturoPolDataSetBindingSource.Position = 0;
             // 
-            // Form1
+            // Glowny
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.Dodaj_comboBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.WybierzTyp_comboBox1);
+            this.Controls.Add(this.Wystaw_button1);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.kontrahenci_listBox1);
-            this.Name = "Form1";
+            this.Name = "Glowny";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.fakturoPolDataSet)).EndInit();
@@ -118,9 +110,8 @@
 
         private System.Windows.Forms.ListBox kontrahenci_listBox1;
         private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox Dodaj_comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button Wystaw_button1;
+        private System.Windows.Forms.ComboBox WybierzTyp_comboBox1;
         private FakturoPolDataSet fakturoPolDataSet;
         private System.Windows.Forms.BindingSource fakturoPolDataSetBindingSource;
     }

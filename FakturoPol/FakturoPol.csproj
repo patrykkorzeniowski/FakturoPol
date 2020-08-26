@@ -51,16 +51,25 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FakturoPolDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Glowny.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Glowny.Designer.cs">
+      <DependentUpon>Glowny.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NowaFaktura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NowaFaktura.Designer.cs">
+      <DependentUpon>NowaFaktura.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Glowny.resx">
+      <DependentUpon>Glowny.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NowaFaktura.resx">
+      <DependentUpon>NowaFaktura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
