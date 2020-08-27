@@ -19,7 +19,13 @@ namespace FakturoPol
 
         private void NowaFaktura_Load(object sender, EventArgs e)
         {
-
+            WlasciwosciFaktury WlasciwosciFaktury = new WlasciwosciFaktury()
+            {
+                MdiParent = this,
+                Dock = DockStyle.Fill
+        };
+            
+            WlasciwosciFaktury.Show();
         }
 
         private void label3_Click(object sender, EventArgs e)
