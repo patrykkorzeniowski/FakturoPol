@@ -66,7 +66,7 @@
             this.Wystaw_button1.TabIndex = 2;
             this.Wystaw_button1.Text = "Dodaj";
             this.Wystaw_button1.UseVisualStyleBackColor = true;
-            this.Wystaw_button1.Click += new System.EventHandler(this.Form1_Load);
+            this.Wystaw_button1.Click += new System.EventHandler(this.Wystaw_button1_Click);
             // 
             // WybierzTyp_comboBox1
             // 
@@ -76,7 +76,6 @@
             this.WybierzTyp_comboBox1.Size = new System.Drawing.Size(127, 24);
             this.WybierzTyp_comboBox1.TabIndex = 4;
             this.WybierzTyp_comboBox1.Text = "Typ dokumentu";
-            this.WybierzTyp_comboBox1.SelectedIndexChanged += new System.EventHandler(this.Dodaj_comboBox1_SelectedIndexChanged);
             // 
             // fakturoPolDataSet
             // 
@@ -100,6 +99,7 @@
             this.Name = "Glowny";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Glowny_Paint);
             ((System.ComponentModel.ISupportInitialize)(this.fakturoPolDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fakturoPolDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);

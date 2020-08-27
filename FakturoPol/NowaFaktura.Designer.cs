@@ -81,7 +81,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(171, 55);
+            this.label4.Location = new System.Drawing.Point(171, 52);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(331, 17);
             this.label4.TabIndex = 12;
@@ -321,6 +321,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Ivory;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.richTextBox6);
             this.Controls.Add(this.richTextBox5);
@@ -352,6 +353,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.WybierzKontrahenta_comboBox1);
             this.Controls.Add(this.Stwórz_button1);
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "NowaFaktura";
             this.Text = "NowaFaktura";
             this.Load += new System.EventHandler(this.NowaFaktura_Load);
