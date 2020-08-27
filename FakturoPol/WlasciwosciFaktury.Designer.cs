@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.richTextBox6 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox5 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.Podatek_richTextBox6 = new System.Windows.Forms.RichTextBox();
+            this.Brutto_richTextBox5 = new System.Windows.Forms.RichTextBox();
+            this.Netto_richTextBox4 = new System.Windows.Forms.RichTextBox();
+            this.Ilosc_richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.PozycjeDokumentu_richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.opis_label3 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.Opis_richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.VAT_comboBox4 = new System.Windows.Forms.ComboBox();
+            this.Jednostka_comboBox3 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.Brutto_label2 = new System.Windows.Forms.Label();
             this.Vat_label2 = new System.Windows.Forms.Label();
@@ -50,55 +50,60 @@
             this.DataSprzedazy_label3 = new System.Windows.Forms.Label();
             this.DataWystawienia_label2 = new System.Windows.Forms.Label();
             this.MetodaPlatnosci_label1 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.MetodaPlatnosci_comboBox2 = new System.Windows.Forms.ComboBox();
+            this.TerminPlatnosci_comboBox1 = new System.Windows.Forms.ComboBox();
             this.DataSprzedazy_dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.DataWystawienia_dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.WybierzKontrahenta_comboBox1 = new System.Windows.Forms.ComboBox();
             this.NowaFaktura_button1 = new System.Windows.Forms.Button();
+            this.Numer_textBox1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // richTextBox6
+            // Podatek_richTextBox6
             // 
-            this.richTextBox6.Location = new System.Drawing.Point(672, 276);
-            this.richTextBox6.Name = "richTextBox6";
-            this.richTextBox6.Size = new System.Drawing.Size(98, 25);
-            this.richTextBox6.TabIndex = 77;
-            this.richTextBox6.Text = "";
+            this.Podatek_richTextBox6.Location = new System.Drawing.Point(672, 276);
+            this.Podatek_richTextBox6.Name = "Podatek_richTextBox6";
+            this.Podatek_richTextBox6.Size = new System.Drawing.Size(98, 25);
+            this.Podatek_richTextBox6.TabIndex = 77;
+            this.Podatek_richTextBox6.Text = "";
+            this.Podatek_richTextBox6.TextChanged += new System.EventHandler(this.Podatek_richTextBox6_TextChanged);
             // 
-            // richTextBox5
+            // Brutto_richTextBox5
             // 
-            this.richTextBox5.Location = new System.Drawing.Point(578, 276);
-            this.richTextBox5.Name = "richTextBox5";
-            this.richTextBox5.Size = new System.Drawing.Size(88, 25);
-            this.richTextBox5.TabIndex = 76;
-            this.richTextBox5.Text = "";
+            this.Brutto_richTextBox5.Location = new System.Drawing.Point(578, 276);
+            this.Brutto_richTextBox5.Name = "Brutto_richTextBox5";
+            this.Brutto_richTextBox5.Size = new System.Drawing.Size(88, 25);
+            this.Brutto_richTextBox5.TabIndex = 76;
+            this.Brutto_richTextBox5.Text = "";
+            this.Brutto_richTextBox5.TextChanged += new System.EventHandler(this.Brutto_richTextBox5_TextChanged);
             // 
-            // richTextBox4
+            // Netto_richTextBox4
             // 
-            this.richTextBox4.Location = new System.Drawing.Point(449, 275);
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.Size = new System.Drawing.Size(60, 25);
-            this.richTextBox4.TabIndex = 75;
-            this.richTextBox4.Text = "";
+            this.Netto_richTextBox4.Location = new System.Drawing.Point(449, 275);
+            this.Netto_richTextBox4.Name = "Netto_richTextBox4";
+            this.Netto_richTextBox4.Size = new System.Drawing.Size(60, 25);
+            this.Netto_richTextBox4.TabIndex = 75;
+            this.Netto_richTextBox4.Text = "";
             // 
-            // richTextBox3
+            // Ilosc_richTextBox3
             // 
-            this.richTextBox3.Location = new System.Drawing.Point(389, 276);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(55, 25);
-            this.richTextBox3.TabIndex = 74;
-            this.richTextBox3.Text = "";
+            this.Ilosc_richTextBox3.Location = new System.Drawing.Point(389, 276);
+            this.Ilosc_richTextBox3.Name = "Ilosc_richTextBox3";
+            this.Ilosc_richTextBox3.Size = new System.Drawing.Size(55, 25);
+            this.Ilosc_richTextBox3.TabIndex = 74;
+            this.Ilosc_richTextBox3.Text = "";
+            this.Ilosc_richTextBox3.TextChanged += new System.EventHandler(this.Ilosc_richTextBox3_TextChanged);
             // 
-            // richTextBox2
+            // PozycjeDokumentu_richTextBox2
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(37, 275);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(263, 25);
-            this.richTextBox2.TabIndex = 73;
-            this.richTextBox2.Text = "";
+            this.PozycjeDokumentu_richTextBox2.Location = new System.Drawing.Point(37, 275);
+            this.PozycjeDokumentu_richTextBox2.Name = "PozycjeDokumentu_richTextBox2";
+            this.PozycjeDokumentu_richTextBox2.Size = new System.Drawing.Size(263, 25);
+            this.PozycjeDokumentu_richTextBox2.TabIndex = 73;
+            this.PozycjeDokumentu_richTextBox2.Text = "";
             // 
             // opis_label3
             // 
@@ -109,29 +114,31 @@
             this.opis_label3.TabIndex = 72;
             this.opis_label3.Text = "Opis";
             // 
-            // richTextBox1
+            // Opis_richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(33, 345);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(737, 70);
-            this.richTextBox1.TabIndex = 71;
-            this.richTextBox1.Text = "";
+            this.Opis_richTextBox1.Location = new System.Drawing.Point(33, 345);
+            this.Opis_richTextBox1.Name = "Opis_richTextBox1";
+            this.Opis_richTextBox1.Size = new System.Drawing.Size(737, 70);
+            this.Opis_richTextBox1.TabIndex = 71;
+            this.Opis_richTextBox1.Text = "";
             // 
-            // comboBox4
+            // VAT_comboBox4
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(515, 275);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(57, 24);
-            this.comboBox4.TabIndex = 70;
+            this.VAT_comboBox4.FormattingEnabled = true;
+            this.VAT_comboBox4.Location = new System.Drawing.Point(515, 275);
+            this.VAT_comboBox4.Name = "VAT_comboBox4";
+            this.VAT_comboBox4.Size = new System.Drawing.Size(57, 24);
+            this.VAT_comboBox4.TabIndex = 70;
+            this.VAT_comboBox4.SelectedIndexChanged += new System.EventHandler(this.VAT_comboBox4_SelectedIndexChanged);
             // 
-            // comboBox3
+            // Jednostka_comboBox3
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(306, 276);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(77, 24);
-            this.comboBox3.TabIndex = 69;
+            this.Jednostka_comboBox3.FormattingEnabled = true;
+            this.Jednostka_comboBox3.Location = new System.Drawing.Point(306, 276);
+            this.Jednostka_comboBox3.Name = "Jednostka_comboBox3";
+            this.Jednostka_comboBox3.Size = new System.Drawing.Size(77, 24);
+            this.Jednostka_comboBox3.TabIndex = 69;
+            this.Jednostka_comboBox3.SelectedIndexChanged += new System.EventHandler(this.Jednostka_comboBox3_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -250,21 +257,23 @@
             this.MetodaPlatnosci_label1.TabIndex = 56;
             this.MetodaPlatnosci_label1.Text = "Metoda płatności";
             // 
-            // comboBox2
+            // MetodaPlatnosci_comboBox2
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(33, 196);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 55;
+            this.MetodaPlatnosci_comboBox2.FormattingEnabled = true;
+            this.MetodaPlatnosci_comboBox2.Location = new System.Drawing.Point(33, 196);
+            this.MetodaPlatnosci_comboBox2.Name = "MetodaPlatnosci_comboBox2";
+            this.MetodaPlatnosci_comboBox2.Size = new System.Drawing.Size(121, 24);
+            this.MetodaPlatnosci_comboBox2.TabIndex = 55;
+            this.MetodaPlatnosci_comboBox2.SelectedIndexChanged += new System.EventHandler(this.MetodaPlatnosci_comboBox2_SelectedIndexChanged);
             // 
-            // comboBox1
+            // TerminPlatnosci_comboBox1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(616, 127);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(84, 24);
-            this.comboBox1.TabIndex = 54;
+            this.TerminPlatnosci_comboBox1.FormattingEnabled = true;
+            this.TerminPlatnosci_comboBox1.Location = new System.Drawing.Point(616, 127);
+            this.TerminPlatnosci_comboBox1.Name = "TerminPlatnosci_comboBox1";
+            this.TerminPlatnosci_comboBox1.Size = new System.Drawing.Size(84, 24);
+            this.TerminPlatnosci_comboBox1.TabIndex = 54;
+            this.TerminPlatnosci_comboBox1.SelectedIndexChanged += new System.EventHandler(this.TerminPlatnosci_comboBox1_SelectedIndexChanged);
             // 
             // DataSprzedazy_dateTimePicker2
             // 
@@ -318,21 +327,40 @@
             this.NowaFaktura_button1.UseVisualStyleBackColor = true;
             this.NowaFaktura_button1.Click += new System.EventHandler(this.NowaFaktura_button1_Click);
             // 
+            // Numer_textBox1
+            // 
+            this.Numer_textBox1.Location = new System.Drawing.Point(297, 194);
+            this.Numer_textBox1.Name = "Numer_textBox1";
+            this.Numer_textBox1.Size = new System.Drawing.Size(100, 22);
+            this.Numer_textBox1.TabIndex = 78;
+            this.Numer_textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(294, 171);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(121, 21);
+            this.label3.TabIndex = 79;
+            this.label3.Text = "Numer faktury";
+            // 
             // WlasciwosciFaktury
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1807, 821);
-            this.Controls.Add(this.richTextBox6);
-            this.Controls.Add(this.richTextBox5);
-            this.Controls.Add(this.richTextBox4);
-            this.Controls.Add(this.richTextBox3);
-            this.Controls.Add(this.richTextBox2);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.Numer_textBox1);
+            this.Controls.Add(this.Podatek_richTextBox6);
+            this.Controls.Add(this.Brutto_richTextBox5);
+            this.Controls.Add(this.Netto_richTextBox4);
+            this.Controls.Add(this.Ilosc_richTextBox3);
+            this.Controls.Add(this.PozycjeDokumentu_richTextBox2);
             this.Controls.Add(this.opis_label3);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.Opis_richTextBox1);
+            this.Controls.Add(this.VAT_comboBox4);
+            this.Controls.Add(this.Jednostka_comboBox3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Brutto_label2);
             this.Controls.Add(this.Vat_label2);
@@ -346,8 +374,8 @@
             this.Controls.Add(this.DataSprzedazy_label3);
             this.Controls.Add(this.DataWystawienia_label2);
             this.Controls.Add(this.MetodaPlatnosci_label1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.MetodaPlatnosci_comboBox2);
+            this.Controls.Add(this.TerminPlatnosci_comboBox1);
             this.Controls.Add(this.DataSprzedazy_dateTimePicker2);
             this.Controls.Add(this.DataWystawienia_dateTimePicker1);
             this.Controls.Add(this.label5);
@@ -363,15 +391,15 @@
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox richTextBox6;
-        private System.Windows.Forms.RichTextBox richTextBox5;
-        private System.Windows.Forms.RichTextBox richTextBox4;
-        private System.Windows.Forms.RichTextBox richTextBox3;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox Podatek_richTextBox6;
+        private System.Windows.Forms.RichTextBox Brutto_richTextBox5;
+        private System.Windows.Forms.RichTextBox Netto_richTextBox4;
+        private System.Windows.Forms.RichTextBox Ilosc_richTextBox3;
+        private System.Windows.Forms.RichTextBox PozycjeDokumentu_richTextBox2;
         private System.Windows.Forms.Label opis_label3;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.RichTextBox Opis_richTextBox1;
+        private System.Windows.Forms.ComboBox VAT_comboBox4;
+        private System.Windows.Forms.ComboBox Jednostka_comboBox3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label Brutto_label2;
         private System.Windows.Forms.Label Vat_label2;
@@ -385,13 +413,15 @@
         private System.Windows.Forms.Label DataSprzedazy_label3;
         private System.Windows.Forms.Label DataWystawienia_label2;
         private System.Windows.Forms.Label MetodaPlatnosci_label1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox MetodaPlatnosci_comboBox2;
+        private System.Windows.Forms.ComboBox TerminPlatnosci_comboBox1;
         private System.Windows.Forms.DateTimePicker DataSprzedazy_dateTimePicker2;
         private System.Windows.Forms.DateTimePicker DataWystawienia_dateTimePicker1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox WybierzKontrahenta_comboBox1;
         private System.Windows.Forms.Button NowaFaktura_button1;
+        private System.Windows.Forms.TextBox Numer_textBox1;
+        private System.Windows.Forms.Label label3;
     }
 }

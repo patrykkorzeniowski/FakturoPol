@@ -27,7 +27,7 @@ namespace FakturoPol
         {
             string connectionString = @"Data Source=(localdb)\mssqllocaldb;Initial Catalog=FakturoPol;Integrated Security=True";
             SqlConnection conn = new SqlConnection(connectionString);
-            SqlCommand sql = new SqlCommand("Select * from Kontrahent", conn);
+            SqlCommand sql = new SqlCommand("Select * from Kontrahents", conn);
             conn.Open();
             SqlDataReader r = sql.ExecuteReader();
             while (r.Read())
