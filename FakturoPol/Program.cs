@@ -16,7 +16,7 @@ namespace FakturoPol
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Glowny());
+            Application.Run(new Powitalny());
         }
     }
 }

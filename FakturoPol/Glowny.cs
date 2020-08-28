@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Drawing;
@@ -35,6 +36,7 @@ namespace FakturoPol
                 kontrahenci_listBox1.Items.Add(r[2]);
             }
             conn.Close();
+            PobierzListeFaktur();
         }
 
         private void Glowny_Paint(object sender, PaintEventArgs e)
@@ -54,6 +56,54 @@ namespace FakturoPol
             if (WybierzTyp_comboBox1.SelectedItem.ToString() == "Faktura")
             {
                 OtworzFormularzNowaFaktura();
+            }
+        }
+
+        private void nowaFakturaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fakturaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bool isOpen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "Nowa faktura")
+                {
+                    isOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+            if (isOpen == false)
+            {
+                WlasciwosciFaktury otworzNowaFaktura = new WlasciwosciFaktury();
+                otworzNowaFaktura.MdiParent = this;
+                otworzNowaFaktura.Show();
+
+            }
+        }
+
+        private void autorPracyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PobierzListeFaktur()
+        {
+            using (var db = new FakturoPolDbContext())
+            {
+                listBox2.Items.Clear();
+                foreach(var faktura in  db.Faktury.ToList())
+                {
+                        listBox2.Items.Add(faktura.Numer);
+                }
             }
         }
     }

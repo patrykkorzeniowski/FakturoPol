@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -12,6 +13,7 @@ namespace FakturoPol
 {
     public partial class WlasciwosciFaktury : Form
     {
+        delegate Task DelegatZadania();
         public WlasciwosciFaktury()
         {
             InitializeComponent();
@@ -28,37 +30,63 @@ namespace FakturoPol
 
         private void NowaFaktura_button1_Click(object sender, EventArgs e)
         {
+            Faktura nowaFaktura = new Faktura()
+            {
+                Numer = Numer_textBox1.Text,
+                Netto = float.Parse(Netto_richTextBox4.Text),
+                Brutto = float.Parse(Brutto_richTextBox5.Text),
+                DataSprzedazy = DataSprzedazy_dateTimePicker2.Value,
+                DataWystawienia = DataWystawienia_dateTimePicker1.Value,
+                Ilosc = Convert.ToInt32(Ilosc_richTextBox3.Text),
+                JednostkaMiary = Jednostka_comboBox3.Text,
+                KontrahentId = 1,
+                MetodaPlatnosci = MetodaPlatnosci_comboBox2.Text,
+                Podatek = float.Parse(Podatek_richTextBox6.Text),
+                Opis = Opis_richTextBox1.Text,
+                VAT = Convert.ToInt32(VAT_comboBox4.Text)
+            };
+            nowaFaktura.TerminPlatnosci = nowaFaktura.DataWystawienia.AddDays(Convert.ToDouble(TerminPlatnosci_comboBox1.Text));
+
+            Thread thread = new Thread(new ParameterizedThreadStart(WyodrebnijSymulacjeDlugiegoZapisu));
+            thread.Start(nowaFaktura);
+        }
+
+        private void WyodrebnijSymulacjeDlugiegoZapisu(object faktura)
+        {
+            Faktura nowaFaktura = (Faktura)faktura;
+            timer1.Start();
+
+            Task.WhenAll(new[] { DodajFakture(nowaFaktura), CheckTimer() });
+            timer1.Stop();
+        }
+
+        private async Task CheckTimer()
+        {
+            if (textBox1.InvokeRequired)
+            {
+                DelegatZadania d = CheckTimer;
+                this.Invoke(d);
+            }
+            else
+            {
+
+                if (Convert.ToInt32(textBox1.Text) < 400)
+                {
+                    Task.Delay(10).Wait();
+                    int zegar = Convert.ToInt32(textBox1.Text) + 1;
+                    textBox1.Text = zegar.ToString();
+                    await CheckTimer();
+                }
+            }
+
+        }
+        private async Task DodajFakture(Faktura faktura)
+        {
             using (var db = new FakturoPolDbContext())
             {
-                Faktura nowaFaktura = new Faktura()
-                {
-                    Numer = Numer_textBox1.Text,
-                    Netto = float.Parse(Netto_richTextBox4.Text),
-                    Brutto = float.Parse(Brutto_richTextBox5.Text),
-                    DataSprzedazy = DataSprzedazy_dateTimePicker2.Value,
-                    DataWystawienia = DataWystawienia_dateTimePicker1.Value,
-                    Ilosc = Convert.ToInt32(Ilosc_richTextBox3.Text),
-                    JednostkaMiary = Jednostka_comboBox3.Text,
-                    KontrahentId = 1,
-                    MetodaPlatnosci = MetodaPlatnosci_comboBox2.Text,
-                    Podatek = float.Parse(Podatek_richTextBox6.Text),
-                    Opis = Opis_richTextBox1.Text,
-                    VAT = Convert.ToInt32(VAT_comboBox4.Text)
-                };
-                nowaFaktura.TerminPlatnosci = nowaFaktura.DataWystawienia.AddDays(Convert.ToDouble(TerminPlatnosci_comboBox1.Text));
-                db.Faktury.Add(nowaFaktura);
-                db.SaveChanges();
-                //try
-                //{
-                //    Kontrahent k1 = new Kontrahent() { NIP = "1251699020", Nazwa = "Test", Miasto = "Mrk", Ulica = "Testowa", NumerLokalu = "12a", KodPocztowy = "02-222" };
-                //    db.Kontrahenci.Add(k1);
-                //    db.SaveChanges();
-                //}
-                //catch (Exception ex)
-                //{
-                //    Console.WriteLine(ex.Message);
-                //}
-
+                db.Faktury.Add(faktura);
+                await db.SaveChangesAsync();
+                this.Hide();
             }
         }
 
@@ -98,6 +126,22 @@ namespace FakturoPol
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            int zegar = Convert.ToInt32(textBox1.Text) + 1;
+            textBox1.Text = zegar.ToString();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void WlasciwosciFaktury_Load(object sender, EventArgs e)
         {
 
         }

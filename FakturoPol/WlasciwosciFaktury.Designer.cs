@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Podatek_richTextBox6 = new System.Windows.Forms.RichTextBox();
             this.Brutto_richTextBox5 = new System.Windows.Forms.RichTextBox();
             this.Netto_richTextBox4 = new System.Windows.Forms.RichTextBox();
@@ -55,11 +56,13 @@
             this.DataSprzedazy_dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.DataWystawienia_dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.WybierzKontrahenta_comboBox1 = new System.Windows.Forms.ComboBox();
             this.NowaFaktura_button1 = new System.Windows.Forms.Button();
             this.Numer_textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Podatek_richTextBox6
@@ -118,7 +121,7 @@
             // 
             this.Opis_richTextBox1.Location = new System.Drawing.Point(33, 345);
             this.Opis_richTextBox1.Name = "Opis_richTextBox1";
-            this.Opis_richTextBox1.Size = new System.Drawing.Size(737, 70);
+            this.Opis_richTextBox1.Size = new System.Drawing.Size(737, 91);
             this.Opis_richTextBox1.TabIndex = 71;
             this.Opis_richTextBox1.Text = "";
             // 
@@ -214,7 +217,7 @@
             // Oplacone_checkBox1
             // 
             this.Oplacone_checkBox1.AutoSize = true;
-            this.Oplacone_checkBox1.Location = new System.Drawing.Point(160, 195);
+            this.Oplacone_checkBox1.Location = new System.Drawing.Point(292, 199);
             this.Oplacone_checkBox1.Name = "Oplacone_checkBox1";
             this.Oplacone_checkBox1.Size = new System.Drawing.Size(91, 21);
             this.Oplacone_checkBox1.TabIndex = 60;
@@ -224,7 +227,7 @@
             // TerminPlatnosci_label6
             // 
             this.TerminPlatnosci_label6.AutoSize = true;
-            this.TerminPlatnosci_label6.Location = new System.Drawing.Point(613, 105);
+            this.TerminPlatnosci_label6.Location = new System.Drawing.Point(157, 171);
             this.TerminPlatnosci_label6.Name = "TerminPlatnosci_label6";
             this.TerminPlatnosci_label6.Size = new System.Drawing.Size(112, 17);
             this.TerminPlatnosci_label6.TabIndex = 59;
@@ -269,7 +272,7 @@
             // TerminPlatnosci_comboBox1
             // 
             this.TerminPlatnosci_comboBox1.FormattingEnabled = true;
-            this.TerminPlatnosci_comboBox1.Location = new System.Drawing.Point(616, 127);
+            this.TerminPlatnosci_comboBox1.Location = new System.Drawing.Point(171, 196);
             this.TerminPlatnosci_comboBox1.Name = "TerminPlatnosci_comboBox1";
             this.TerminPlatnosci_comboBox1.Size = new System.Drawing.Size(84, 24);
             this.TerminPlatnosci_comboBox1.TabIndex = 54;
@@ -298,15 +301,6 @@
             this.label5.TabIndex = 51;
             this.label5.Text = "Wybierz Kontrahenta";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(177, 63);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(331, 17);
-            this.label4.TabIndex = 50;
-            this.label4.Text = "moja metoda mniej bezpieczna, wybor poprzez liste";
-            // 
             // WybierzKontrahenta_comboBox1
             // 
             this.WybierzKontrahenta_comboBox1.FormattingEnabled = true;
@@ -319,7 +313,7 @@
             // 
             // NowaFaktura_button1
             // 
-            this.NowaFaktura_button1.Location = new System.Drawing.Point(578, 57);
+            this.NowaFaktura_button1.Location = new System.Drawing.Point(578, 58);
             this.NowaFaktura_button1.Name = "NowaFaktura_button1";
             this.NowaFaktura_button1.Size = new System.Drawing.Size(181, 29);
             this.NowaFaktura_button1.TabIndex = 48;
@@ -329,7 +323,7 @@
             // 
             // Numer_textBox1
             // 
-            this.Numer_textBox1.Location = new System.Drawing.Point(297, 194);
+            this.Numer_textBox1.Location = new System.Drawing.Point(200, 65);
             this.Numer_textBox1.Name = "Numer_textBox1";
             this.Numer_textBox1.Size = new System.Drawing.Size(100, 22);
             this.Numer_textBox1.TabIndex = 78;
@@ -338,11 +332,33 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(294, 171);
+            this.label3.Location = new System.Drawing.Point(197, 35);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 21);
+            this.label3.Size = new System.Drawing.Size(97, 17);
             this.label3.TabIndex = 79;
             this.label3.Text = "Numer faktury";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(418, 58);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 80;
+            this.textBox1.Text = "0";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(415, 35);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(120, 17);
+            this.label4.TabIndex = 81;
+            this.label4.Text = "Czas trwania (ms)";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // WlasciwosciFaktury
             // 
@@ -350,6 +366,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1807, 821);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Numer_textBox1);
             this.Controls.Add(this.Podatek_richTextBox6);
@@ -379,11 +397,11 @@
             this.Controls.Add(this.DataSprzedazy_dateTimePicker2);
             this.Controls.Add(this.DataWystawienia_dateTimePicker1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.WybierzKontrahenta_comboBox1);
             this.Controls.Add(this.NowaFaktura_button1);
             this.Name = "WlasciwosciFaktury";
             this.Text = "WlasciwosciFaktury";
+            this.Load += new System.EventHandler(this.WlasciwosciFaktury_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -418,10 +436,12 @@
         private System.Windows.Forms.DateTimePicker DataSprzedazy_dateTimePicker2;
         private System.Windows.Forms.DateTimePicker DataWystawienia_dateTimePicker1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox WybierzKontrahenta_comboBox1;
         private System.Windows.Forms.Button NowaFaktura_button1;
         private System.Windows.Forms.TextBox Numer_textBox1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label4;
     }
 }
