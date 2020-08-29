@@ -1,6 +1,6 @@
 ﻿namespace FakturoPol
 {
-    partial class Grafika
+    partial class ParagonFiskalny
     {
         /// <summary>
         /// Required designer variable.
@@ -28,21 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // Grafika
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(308, 212);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(128, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "work in progress....";
+            // 
+            // ParagonFiskalny
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Grafika";
-            this.Text = "Grafika";
-            this.Load += new System.EventHandler(this.Grafika_Load);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Grafika_Paint);
+            this.Controls.Add(this.label1);
+            this.Name = "ParagonFiskalny";
+            this.Text = "ParagonFiskalny";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label1;
     }
 }

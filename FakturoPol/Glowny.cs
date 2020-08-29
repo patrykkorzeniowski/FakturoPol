@@ -50,6 +50,16 @@ namespace FakturoPol
             NowaFaktura oknoFaktury = new NowaFaktura();
             oknoFaktury.ShowDialog();
         }
+        private void OtworzFormularzNotaKsiegowa()
+        {
+            NowaNotaKsiegowa oknoNotyKsiegowej = new NowaNotaKsiegowa();
+            oknoNotyKsiegowej.ShowDialog();
+        }
+        private void OtworzFormularzParagonFiskalny()
+        {
+            ParagonFiskalny oknoParagonuFiskalnego = new ParagonFiskalny();
+            oknoParagonuFiskalnego.ShowDialog();
+        }
 
         private void Wystaw_button1_Click(object sender, EventArgs e)
         {
@@ -57,7 +67,16 @@ namespace FakturoPol
             {
                 OtworzFormularzNowaFaktura();
             }
+            if (WybierzTyp_comboBox1.SelectedItem.ToString() == "Nota księgowa")
+            {
+                OtworzFormularzNotaKsiegowa();
+            }
+            if (WybierzTyp_comboBox1.SelectedItem.ToString() == "Paragon Fiskalny")
+            {
+                OtworzFormularzParagonFiskalny();
+            }
         }
+
 
         private void nowaFakturaToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -66,23 +85,8 @@ namespace FakturoPol
 
         private void fakturaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            bool isOpen = false;
-            foreach (Form f in Application.OpenForms)
-            {
-                if (f.Text == "Nowa faktura")
-                {
-                    isOpen = true;
-                    f.Focus();
-                    break;
-                }
-            }
-            if (isOpen == false)
-            {
-                WlasciwosciFaktury otworzNowaFaktura = new WlasciwosciFaktury();
-                otworzNowaFaktura.MdiParent = this;
-                otworzNowaFaktura.Show();
-
-            }
+            WlasciwosciFaktury wf = new WlasciwosciFaktury();
+            wf.ShowDialog();
         }
 
         private void autorPracyToolStripMenuItem_Click(object sender, EventArgs e)
@@ -105,6 +109,36 @@ namespace FakturoPol
                         listBox2.Items.Add(faktura.Numer);
                 }
             }
+        }
+
+        private void paragonFiskalnyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ParagonFiskalny pf = new ParagonFiskalny();
+            pf.ShowDialog();
+
+        }
+
+        private void notaKsięgowaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NowaNotaKsiegowa nk = new NowaNotaKsiegowa();
+            nk.ShowDialog();
+        }
+
+        private void grafikaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Grafika gr = new Grafika();
+            gr.ShowDialog();
+        }
+
+        private void podziękowaniaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Podziekowania po = new Podziekowania();
+            po.ShowDialog();
+        }
+
+        private void zakończToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

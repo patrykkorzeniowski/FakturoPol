@@ -1,6 +1,6 @@
 ﻿namespace FakturoPol
 {
-    partial class Grafika
+    partial class NotaKsiegowa
     {
         /// <summary>
         /// Required designer variable.
@@ -28,19 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // Grafika
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Grafika";
-            this.Text = "Grafika";
-            this.Load += new System.EventHandler(this.Grafika_Load);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Grafika_Paint);
-            this.ResumeLayout(false);
-
+            this.Text = "NotaKsiegowa";
         }
 
         #endregion

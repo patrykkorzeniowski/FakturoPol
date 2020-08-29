@@ -43,6 +43,7 @@
             this.notaKsięgowaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grafikaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.podziękowaniaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.zakończToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.fakturoPolDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fakturoPolDataSetBindingSource)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -106,14 +107,15 @@
             this.podziękowaniaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // plikToolStripMenuItem
             // 
             this.plikToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.wystawToolStripMenuItem});
+            this.wystawToolStripMenuItem,
+            this.zakończToolStripMenuItem});
             this.plikToolStripMenuItem.Name = "plikToolStripMenuItem";
             this.plikToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.plikToolStripMenuItem.Text = "Plik";
@@ -125,39 +127,50 @@
             this.paragonFiskalnyToolStripMenuItem,
             this.notaKsięgowaToolStripMenuItem});
             this.wystawToolStripMenuItem.Name = "wystawToolStripMenuItem";
-            this.wystawToolStripMenuItem.Size = new System.Drawing.Size(143, 26);
+            this.wystawToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.wystawToolStripMenuItem.Text = "Wystaw";
             // 
             // fakturaToolStripMenuItem
             // 
             this.fakturaToolStripMenuItem.Name = "fakturaToolStripMenuItem";
-            this.fakturaToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
+            this.fakturaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.fakturaToolStripMenuItem.Text = "Faktura";
             this.fakturaToolStripMenuItem.Click += new System.EventHandler(this.fakturaToolStripMenuItem_Click);
             // 
             // paragonFiskalnyToolStripMenuItem
             // 
             this.paragonFiskalnyToolStripMenuItem.Name = "paragonFiskalnyToolStripMenuItem";
-            this.paragonFiskalnyToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
+            this.paragonFiskalnyToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.paragonFiskalnyToolStripMenuItem.Text = "Paragon Fiskalny";
+            this.paragonFiskalnyToolStripMenuItem.Click += new System.EventHandler(this.paragonFiskalnyToolStripMenuItem_Click);
             // 
             // notaKsięgowaToolStripMenuItem
             // 
             this.notaKsięgowaToolStripMenuItem.Name = "notaKsięgowaToolStripMenuItem";
-            this.notaKsięgowaToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
+            this.notaKsięgowaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.notaKsięgowaToolStripMenuItem.Text = "Nota księgowa";
+            this.notaKsięgowaToolStripMenuItem.Click += new System.EventHandler(this.notaKsięgowaToolStripMenuItem_Click);
             // 
             // grafikaToolStripMenuItem
             // 
             this.grafikaToolStripMenuItem.Name = "grafikaToolStripMenuItem";
             this.grafikaToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
             this.grafikaToolStripMenuItem.Text = "Grafika";
+            this.grafikaToolStripMenuItem.Click += new System.EventHandler(this.grafikaToolStripMenuItem_Click);
             // 
             // podziękowaniaToolStripMenuItem
             // 
             this.podziękowaniaToolStripMenuItem.Name = "podziękowaniaToolStripMenuItem";
             this.podziękowaniaToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
             this.podziękowaniaToolStripMenuItem.Text = "Podziękowania :)";
+            this.podziękowaniaToolStripMenuItem.Click += new System.EventHandler(this.podziękowaniaToolStripMenuItem_Click);
+            // 
+            // zakończToolStripMenuItem
+            // 
+            this.zakończToolStripMenuItem.Name = "zakończToolStripMenuItem";
+            this.zakończToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.zakończToolStripMenuItem.Text = "Zakończ";
+            this.zakończToolStripMenuItem.Click += new System.EventHandler(this.zakończToolStripMenuItem_Click);
             // 
             // Glowny
             // 
@@ -200,6 +213,7 @@
         private System.Windows.Forms.ToolStripMenuItem notaKsięgowaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem grafikaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem podziękowaniaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem zakończToolStripMenuItem;
     }
 }
 

@@ -85,6 +85,12 @@
       <DependentUpon>Grafika.cs</DependentUpon>
     </Compile>
     <Compile Include="Kontrahent.cs" />
+    <Compile Include="NotaKsiegowa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotaKsiegowa.Designer.cs">
+      <DependentUpon>NotaKsiegowa.cs</DependentUpon>
+    </Compile>
     <Compile Include="NowaFaktura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,18 @@
     <Compile Include="NowyParagon.Designer.cs">
       <DependentUpon>NowyParagon.cs</DependentUpon>
     </Compile>
+    <Compile Include="ParagonFiskalny.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParagonFiskalny.Designer.cs">
+      <DependentUpon>ParagonFiskalny.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Podziekowania.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Podziekowania.Designer.cs">
+      <DependentUpon>Podziekowania.cs</DependentUpon>
+    </Compile>
     <Compile Include="Powitalny.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,11 +138,20 @@
     <EmbeddedResource Include="Glowny.resx">
       <DependentUpon>Glowny.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Grafika.resx">
+      <DependentUpon>Grafika.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NowaFaktura.resx">
       <DependentUpon>NowaFaktura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NowaNotaKsiegowa.resx">
       <DependentUpon>NowaNotaKsiegowa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParagonFiskalny.resx">
+      <DependentUpon>ParagonFiskalny.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Podziekowania.resx">
+      <DependentUpon>Podziekowania.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Powitalny.resx">
       <DependentUpon>Powitalny.cs</DependentUpon>
